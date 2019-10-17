@@ -20,7 +20,7 @@ public class TestService {
 
     @Klock(keys = {"#userId"})
     public String getValue(String userId,@KlockKey int id)throws Exception{
-        Thread.sleep(60*1000);
+        Thread.sleep(6*1000);
         return "success";
     }
 

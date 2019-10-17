@@ -30,8 +30,9 @@ public class KlockTests {
 			final int num = i;
 			executorService.submit(() -> {
 				try {
-					String result = testService.getValue("sleep" + num);
-					System.err.println("线程:[" + Thread.currentThread().getName() + "]拿到结果=》" + result + new Date().toLocaleString());
+					String param = "sleep" + num;
+					String result = testService.getValue(param);
+					System.err.println("线程:[" + Thread.currentThread().getName() + "]拿到结果=》" + result + ",key=》" + param + "||" + new Date().toString());
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
